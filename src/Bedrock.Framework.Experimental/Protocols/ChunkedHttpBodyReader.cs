@@ -77,7 +77,8 @@ namespace Bedrock.Framework.Protocols
 
                         examined = sequenceReader.Position;
                         IsCompleted = true;
-                        break;
+                        consumed = sequenceReader.Position;
+                        return true;
                     }
                 }
             }

@@ -132,6 +132,7 @@ namespace Bedrock.Framework.Infrastructure
                         var count = (int)Math.Min(readableBuffer.Length, destination.Length);
                         readableBuffer = readableBuffer.Slice(0, count);
                         readableBuffer.CopyTo(destination.Span);
+                        
                         return count;
                     }
 
